@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Bento Grid</title>
+    <style>
+		body{
+			display:flex;
+			justify-content: center;
+            align-items: center;
+			background-color: var(--bg);
+		}
+		:root{
+			--bg: #f5f5f5;;
+			--outer-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5);
+            --inner-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.1), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.7);
+		}
+		.outer-grid >div{
+			background-color: var(--bg);
+			border-radius: 10px;
+			box-shadow: var(--outer-shadow);
+			box-shadow: var(--inner-shadow);
+		}
+        .outer-grid{
+			display:grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 20px;
+			grid-auto-rows: 7rem;
+			width: 100%;
+			max-width: 90%;
+		}
+		.innert-tall{
+			background-color: var(--bg);
+			grid-column: span 1;
+			grid-row: span 3;
+		}
+		.innert-small-top{
+			grid-column: span 1;
+		}
+		.innert-long{
+			grid-column: span 2;
+		}
+		.innert-small-bottom{
+			grid-row: span 2;
+		}
+		.innert-long-bottom{
+			grid-row: span 3;
+		}
+		.innert-long-bottom-right-1{
+		
+		}
+		.innert-left-long{
+			grid-row: span 2;
+		}
+		.innert-bottom-right{
+			grid-column: span 2;
+		}
+    </style>
+</head>
+<body>
+
+    <div class="outer-grid">
+		<div class="innert-tall"></div>
+		<div class="innert-small-top"></div>
+		<div class="innert-long"></div>
+		<div class="innert-small-bottom"></div>
+		<div class="innert-long-bottom"></div>
+		<div class="innert-long-bottom-right-1"></div>
+		<div class="innert-left-long"></div>
+		<div class="innert-bottom-right"></div>
+	</div>
+
+</body>
+</html>
